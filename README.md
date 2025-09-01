@@ -24,6 +24,8 @@ Built with Python + scikit-learn, deployed as a FastAPI service on Render and co
 ## 🔗 Live Demo
 - **API:** https://diabetes-ml-api.onrender.com  
 - **UI:** https://diabetes-risk-prediction.lovable.app
+Here’s the Diabetes Risk Prediction app in action:
+![App Screenshot](./screenshot.png)
 
 ## 📂 Repository Structure
 ├── diabetes_clean.py # Clean training script
