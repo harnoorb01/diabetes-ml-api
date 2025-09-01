@@ -21,22 +21,23 @@ Built with Python + scikit-learn, deployed as a FastAPI service on Render and co
 - **Render**: cloud deployment
 - **Lovable**: AI frontend builder calling the API
 
+## 📂 Repository Structure
+```plaintext
+diabetes-ml-api/
+├── diabetes_clean.py   # Clean training script
+├── diabetes_full.py    # Full/learning script 
+├── main.py             # FastAPI app (/, /health, /predict)
+├── diabetes_model.pkl  #Trained SVM model
+├── scaler.pkl          # StandardScaler used for preprocessing
+├── requirements.txt    # Python dependencies
+├── README.md           # Project overview
+└── screenshot.png      # UI screenshot
+
 ## 🔗 Live Demo
 - **API:** https://diabetes-ml-api.onrender.com  
 - **UI:** https://diabetes-risk-prediction.lovable.app
-Here’s what the UI looks like:
+- Here’s what the UI looks like:
 ![App Screenshot](./screenshot.png)
-
-## 📂 Repository Structure
-diabetes-ml-api/
-├── diabetes_clean.py # Clean training script
-├── diabetes_full.py # Full/annotated script (optional)
-├── main.py # FastAPI app (/, /health, /predict)
-├── diabetes_model.pkl # Trained SVM model
-├── scaler.pkl # StandardScaler used for preprocessing
-├── requirements.txt # Python dependencies
-├── README.md # This file
-└── screenshot.png # UI screenshot
 
 ## ✨ Future Improvements 
 Better feature handling for unknown values.
