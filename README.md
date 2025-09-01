@@ -26,8 +26,8 @@ Built with Python + scikit-learn, deployed as a FastAPI service on Render and co
 diabetes-ml-api/
 ├── diabetes_clean.py   # Clean training script
 ├── diabetes_full.py    # Full/learning script 
-├── main.py             # FastAPI app (/, /health, /predict)
-├── diabetes_model.pkl  #Trained SVM model
+├── main.py             # FastAPI app (/docs, /health, /predict)
+├── diabetes_model.pkl  # Trained SVM model
 ├── scaler.pkl          # StandardScaler used for preprocessing
 ├── requirements.txt    # Python dependencies
 ├── README.md           # Project overview
