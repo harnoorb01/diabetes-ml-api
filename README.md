@@ -24,17 +24,19 @@ Built with Python + scikit-learn, deployed as a FastAPI service on Render and co
 ## 🔗 Live Demo
 - **API:** https://diabetes-ml-api.onrender.com  
 - **UI:** https://diabetes-risk-prediction.lovable.app
-Here’s the Diabetes Risk Prediction app in action:
+Here’s what the UI looks like:
 ![App Screenshot](./screenshot.png)
 
 ## 📂 Repository Structure
+diabetes-ml-api/
 ├── diabetes_clean.py # Clean training script
 ├── diabetes_full.py # Full/annotated script (optional)
-├── main.py # FastAPI app (/ , /health, /predict)
+├── main.py # FastAPI app (/, /health, /predict)
 ├── diabetes_model.pkl # Trained SVM model
 ├── scaler.pkl # StandardScaler used for preprocessing
 ├── requirements.txt # Python dependencies
-└── README.md # This file
+├── README.md # This file
+└── screenshot.png # UI screenshot
 
 ## ✨ Future Improvements 
 Better feature handling for unknown values.
