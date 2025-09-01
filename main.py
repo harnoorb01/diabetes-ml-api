@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import numpy as np, joblib
 
-# load files (as you already had)
+# load files 
 model = joblib.load("diabetes_model.pkl")
 scaler = joblib.load("scaler.pkl")
 
@@ -21,6 +21,7 @@ class InputRow(BaseModel):
     DiabetesPedigreeFunction: float
     Age: float
 
+#Welcome message
 @app.get("/")
 def home():
     return {"message": "Diabetes ML API is running.", "try": ["/health", "/docs", "POST /predict"]}

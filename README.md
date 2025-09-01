@@ -34,11 +34,10 @@ Built with Python + scikit-learn, deployed as a FastAPI service on Render and co
 ├── requirements.txt # Python dependencies
 └── README.md # This file
 
-## Future Improvements 
+## ✨ Future Improvements 
 Better feature handling for unknown values.
-
-
+Auto-complete/Suggestions: Smart defaults based on age/gender demographics
+Results History: Let users save and compare multiple predictions over time
 
 ## ⚠️ Disclaimer
 This project is for educational/demo purposes only and not medical advice. Predictions are based on a model trained on a public dataset and may not reflect clinical reality.
-
