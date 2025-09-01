@@ -5,8 +5,14 @@
 ![Render](https://img.shields.io/badge/Render-Deployed-46E3B7?logo=render)
 ![Lovable](https://img.shields.io/badge/Lovable-Frontend-ff69b4)
 
-An end-to-end machine learning project that predicts risk of diabetes using the Pima Indians Diabetes dataset.  
-Built with Python + scikit-learn, deployed as a FastAPI service on Render and connected to Lovable, an AI web tool frontend service for real-time risk screening. 
+I built this project as a way to get hands-on experience with machine learning, APIs and cloud deployment. Diabetes is a topic that is highly prevalent in the South Asian community, so I wanted my first end-to-end project to be meaningful as well as educational. The result is an end-to-end machine learning project that predicts risk of diabetes using the Pima Indians Diabetes dataset. I built this with Python + scikit-learn, deployed it using a FastAPI service on Render and connected to Lovable, an AI web tool frontend service for real-time risk screening.
+
+## 🎯 Goals 
+My goals with this project were:  
+- Learn how to train a machine learning model on an existing dataset  
+- Explore API endpoints with **FastAPI** and see how backend/frontend communication works  
+- Experiment with deploying apps to the cloud using **Render**  
+- Try out modern AI-assisted frontend tools like **Lovable** to design a simple but clean UI  
 
 ## 🚀 Project Overview
 - **ML Model**: Support Vector Machine (SVM) trained on health indicators (glucose, BMI, age, etc).  
