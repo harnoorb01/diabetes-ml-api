@@ -1,26 +1,16 @@
-# main.py
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware   # <-- add this
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import numpy as np, joblib
 
-# load your saved files
+# load files (as you already had)
 model = joblib.load("diabetes_model.pkl")
 scaler = joblib.load("scaler.pkl")
 
-# create FastAPI app
 app = FastAPI(title="Diabetes Predictor")
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True,
+                   allow_methods=["*"], allow_headers=["*"])
 
-# --- CORS middleware (needed if UI is on another site) ---
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],   # for demo: allow all origins
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-# define input schema
 class InputRow(BaseModel):
     Pregnancies: float
     Glucose: float
@@ -31,21 +21,32 @@ class InputRow(BaseModel):
     DiabetesPedigreeFunction: float
     Age: float
 
+@app.get("/")
+def home():
+    return {"message": "Diabetes ML API is running.", "try": ["/health", "/docs", "POST /predict"]}
+
 @app.get("/health")
 def health():
     return {"ok": True}
 
-@app.post("/predict")
-def predict(x: InputRow):
-    arr = np.array([[x.Pregnancies, x.Glucose, x.BloodPressure,
-                     x.SkinThickness, x.Insulin, x.BMI,
-                     x.DiabetesPedigreeFunction, x.Age]])
-    arr
-
-@app.get("/")
-def home():
+# NEW: quick sanity check
+@app.get("/debug")
+def debug():
     return {
-        "message": "Diabetes ML API is running.",
-        "try": ["/health", "/docs", "POST /predict"]
+        "model_loaded": hasattr(model, "predict"),
+        "scaler_loaded": hasattr(scaler, "transform")
     }
 
+# FIXED: robust predict with explicit return and error surfacing
+@app.post("/predict")
+def predict(x: InputRow):
+    try:
+        arr = np.array([[x.Pregnancies, x.Glucose, x.BloodPressure,
+                         x.SkinThickness, x.Insulin, x.BMI,
+                         x.DiabetesPedigreeFunction, x.Age]])
+        arr_scaled = scaler.transform(arr)
+        y = int(model.predict(arr_scaled)[0])   # 0 or 1
+        return {"label": y}
+    except Exception as e:
+        # If anything goes wrong, you’ll see the message in the response/logs
+        raise HTTPException(status_code=500, detail=str(e))
