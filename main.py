@@ -41,3 +41,11 @@ def predict(x: InputRow):
                      x.SkinThickness, x.Insulin, x.BMI,
                      x.DiabetesPedigreeFunction, x.Age]])
     arr
+
+@app.get("/")
+def home():
+    return {
+        "message": "Diabetes ML API is running.",
+        "try": ["/health", "/docs", "POST /predict"]
+    }
+
