@@ -32,6 +32,7 @@ diabetes-ml-api/
 ├── requirements.txt    # Python dependencies
 ├── README.md           # Project overview
 └── screenshot.png      # UI screenshot
+```
 
 ## 🔗 Live Demo
 - **API:** https://diabetes-ml-api.onrender.com  
