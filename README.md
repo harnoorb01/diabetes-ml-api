@@ -5,7 +5,7 @@
 ![Render](https://img.shields.io/badge/Render-Deployed-46E3B7?logo=render)
 ![Lovable](https://img.shields.io/badge/Lovable-Frontend-ff69b4)
 
-I built this project as a way to get hands-on experience with machine learning, APIs and cloud deployment. Diabetes is a topic that is highly prevalent in the South Asian community, so I wanted my first end-to-end project to be meaningful as well as educational. The result is an end-to-end machine learning project that predicts risk of diabetes using the Pima Indians Diabetes dataset. I built this with Python + scikit-learn, deployed it using a FastAPI service on Render and connected to Lovable, an AI web tool frontend service for real-time risk screening.
+This is my first full end-to-end machine learning project. I wanted to learn how to take a model from code → API → cloud → UI, and also pick a problem that felt meaningful. Diabetes is a topic that is highly prevalent in the South Asian community, so this felt like the right project to start with. The result is a web app that predicts risk of diabetes using the Pima Indians Diabetes dataset. Users can enter health values (glucose, BMI, age, etc.) and the model returns whether they fall into a **Low Risk ✅** or **High Risk ⚠️** category. I built this with Python + scikit-learn, deployed it using a FastAPI service on Render and connected to Lovable, an AI web tool frontend service for real-time risk screening.
 
 ## 🎯 Goals 
 My goals with this project were:  
@@ -47,9 +47,11 @@ diabetes-ml-api/
 ![App Screenshot](./screenshot.png)
 
 ## ✨ Future Improvements 
-Better feature handling for unknown values.
-Auto-complete/Suggestions: Smart defaults based on age/gender demographics
-Results History: Let users save and compare multiple predictions over time
+- Better security 
+- Better feature handling for unknown values
+- Auto-complete/Suggestions: Smart defaults based on age/gender demographics
+- Results History: Let users save and compare multiple predictions over time
+- Work with Docker for easier deployment.
 
 ## ⚠️ Disclaimer
 This project is for educational/demo purposes only and not medical advice. Predictions are based on a model trained on a public dataset and may not reflect clinical reality.

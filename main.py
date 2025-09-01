@@ -21,7 +21,7 @@ class InputRow(BaseModel):
     DiabetesPedigreeFunction: float
     Age: float
 
-#Welcome message
+#Welcome
 @app.get("/")
 def home():
     return {"message": "Diabetes ML API is running.", "try": ["/health", "/docs", "POST /predict"]}
