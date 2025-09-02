@@ -30,14 +30,14 @@ My goals with this project were:
 ## 📂 Repository Structure
 ```plaintext
 diabetes-ml-api/
-├── diabetes_clean.py   # Clean training script
-├── diabetes_full.py    # Full/learning script 
-├── main.py             # FastAPI app (/docs, /health, /predict)
-├── diabetes_model.pkl  # Trained SVM model
-├── scaler.pkl          # StandardScaler used for preprocessing
-├── requirements.txt    # Python dependencies
-├── README.md           # Project overview
-└── screenshot.png      # UI screenshot
+├── diabetes_clean.py  
+├── diabetes_full.py    
+├── main.py             
+├── diabetes_model.pkl  
+├── scaler.pkl          
+├── requirements.txt    
+├── README.md          
+└── screenshot.png     
 ```
 
 ## 🔗 Live Demo
