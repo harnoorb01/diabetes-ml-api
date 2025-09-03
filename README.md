@@ -15,11 +15,11 @@ My goals with this project were:
 - Try out modern AI-assisted frontend tools like **Lovable** to design a simple but clean UI  
 
 ## 🚀 Project Overview
-- **ML Model**: Support Vector Machine (SVM) trained on health indicators (glucose, BMI, age, etc).  
-- **API**: FastAPI backend with endpoints to check health (`/health`) and make predictions (`/predict`).  
-- **Cloud Deployment**: Hosted on [Render](https://render.com) with a public API.  
-- **Frontend UI**: Built with Lovable that calls the API.
-- **UX Enhancements:**: Tooltips explaining specific features (Diabetes Pedigree Function). **Quick reset** --> restores to default values + **Clear All** --> reset to blank to allow users to input specific values. Clear resault messages: **Low Risk ✅ or High Risk ⚠️**.
+- **ML Model**: Support Vector Machine (SVM) trained on health indicators (glucose, BMI, age, etc)  
+- **API**: FastAPI backend with endpoints to check health (`/health`) and make predictions (`/predict`)  
+- **Cloud Deployment**: Hosted on [Render](https://render.com) with a public API  
+- **Frontend UI**: Built with Lovable that calls the API
+- **UX Enhancements:**: Tooltips explaining specific features (Diabetes Pedigree Function). **Quick reset** --> restores to default values + **Clear All** --> reset to blank to allow users to input specific values. Clear resault messages: **Low Risk ✅ or High Risk ⚠️**
 
 ## ⚙️ Tech Stack
 - **Python**: pandas, scikit-learn, numpy
@@ -51,7 +51,7 @@ diabetes-ml-api/
 - Better feature handling for unknown values
 - Auto-complete/Suggestions: Smart defaults based on age/gender demographics
 - Results History: Let users save and compare multiple predictions over time
-- Work with Docker for easier deployment.
+- Work with Docker for easier deployment
 
 ## ⚠️ Disclaimer
 This project is for educational/demo purposes only and not medical advice. Predictions are based on a model trained on a public dataset and may not reflect clinical reality.
